@@ -1,4 +1,4 @@
-# responsive-tables
+# Responsive Tables
 Lightweight script to nicely make HTML Table structure responsive.
 
 Usage:
