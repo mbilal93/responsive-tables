@@ -1,0 +1,160 @@
+.table-responsive-block-container .table {
+  margin-top: 0;
+}
+
+.table-responsive-block .table-block {
+  background-color: #F8F8F8;
+  margin-bottom: 1em;
+  padding: 24px 18px 15px;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #eee;
+}
+.table-responsive-block .logging.table p {
+  font-size: 12px;
+}
+.table-responsive-block .table-block:last-child {
+  margin-bottom: 1em;
+}
+.table-responsive-block .table-block .block-row {
+  display: table-row;
+  width: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+.table-responsive-block .table-block:last-child .block-row {
+  padding-bottom: 0px;
+}
+.table-responsive-block .table-block .block-row > div {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: 300;
+  padding-bottom: 12px;
+}
+.table-responsive-block .table-block .block-row > div .fooicon {
+  display: none;
+}
+.table-responsive-block .table-block .head.thead .chkcontainer {
+  position: absolute;
+  right: 1em;
+  top: 3em;
+}
+.table-responsive-block .table-block .checkall.head {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.table-responsive-block .checkall.head .checkmark2:before {
+  content: "Select all";
+  line-height: normal;
+  width: 110px;
+  position: absolute;
+  font-size: 14px;
+  margin: 2px;
+  left: 2em;
+}
+.table-responsive-block .checkall .checkmark2::before {
+  content: "Check all";
+  width: 80px;
+  display: block;
+  position: absolute;
+  right: -6em;
+}
+.table-responsive-block .checkall.head {
+  padding-top: 1em;
+  margin-bottom: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eee;
+}
+.table-responsive-block .table-block .checkall.head + .block-row {
+  display: block;
+  position: relative;
+}
+.table-responsive-block .table-block .checkall.head + .block-row .chkcontainer {
+  right: 0;
+  top: 0;
+}
+.table-responsive-block .table-block .block-row > .head {
+  font-weight: 600;
+  padding-right: 3em;
+  min-width: 100px;
+  display: table-cell;
+  padding-bottom: 5px;
+}
+.table-responsive-block .table-block .block-row > .head:not(.thead) .chkcontainer {
+  right: auto;
+  top: 0;
+  position: relative;
+}
+.table-responsive-block .table-block .block-row > .head:not(.thead) .chkcontainer:after {
+  content: "Select all";
+}
+.table-responsive-block .table-block .block-row.is_button {
+  display: table;
+  padding-top: 14px;
+  width: 100%;
+}
+.table-responsive-block .table-block .block-row.is_button .head {
+  display: none;
+}
+.table-responsive-block #datanote .table-block .block-row.is_button {
+  text-align: center;
+}
+.table-responsive-block .table-block .block-row.is_button .head {
+  min-width: initial;
+  margin-right: 0;
+}
+.table-responsive-block .table-block.block-footer > div {
+  display: inline-block;
+  vertical-align: top;
+  padding-bottom: 30px;
+  margin: 0 2em 0 0;
+}
+.table-responsive-block .table-block .block-footer {
+  padding-top: 22px;
+  border-top: 1px solid #eee;
+}
+.table-responsive-block .table-block.block-footer > div:first-child {
+  margin-left: 0;
+}
+.table-responsive-block .table-block.block-footer > div:last-child {
+  margin-right: 0;
+}
+.table-responsive-block .table-block.block-footer .head {
+  font-weight: 600;
+}
+
+button {
+  padding: 5px;
+  margin: 5px 2px 0px 0;
+}
+
+@media (max-width: 767px) {
+  .table-block {
+    display: flex;
+  }
+
+  .table-block {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+@media (max-width: 530px) {
+  .table-block {
+    flex-wrap: wrap;
+  }
+
+  .table-block .block-row {
+    width: 100% !important;
+    padding: 10px 0 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .table-block .block-row:last-child {
+    border-bottom: none;
+  }
+}
+
+/*# sourceMappingURL=responsive-tables.css.map */
