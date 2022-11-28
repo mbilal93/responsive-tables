@@ -1,3 +1,8 @@
+/*
+* Responsive Table JQuery
+* Code by M.Bilal93
+* https://github.com/mbilal93/responsive-tables/
+* */
 if(typeof jQuery == 'undefined') {console.log('jQuery not found');}
 
 $.fn.responsiveTables = function (opts) {
