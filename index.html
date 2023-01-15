@@ -8,7 +8,7 @@
     <title>Responsive Table Blocks</title>
     <link rel="stylesheet" href="css/responsive-tables.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/responsive-tables.min.js"></script>
+    <script type="text/javascript" src="js/responsive-tables.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Plus Jakarta Sans" rel="stylesheet">
 
 </head>
@@ -24,20 +24,7 @@
             padding: 1em;
             margin: auto;
         }
-        .table {
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        .table thead {
-            background-color: #d7d7d7;
-        }
-        .table tbody td {
-            background-color: #eeeeee;
-            text-align: center;
-        }
-        .table th, .table td {
-            padding: 10px;
-        }
+
         a.button {
             background-color: #03a9f4;
             padding: 10px 30px;
@@ -45,8 +32,14 @@
             text-decoration: none;
             margin-top: 1.5em;
             display: inline-block;
+            border-radius: 5px;
         }
-
+        pre {
+            white-space: break-spaces;
+            background-color: #eee;
+            padding: 9px;
+            border-radius: 5px;
+        }
         /*Show blocks */
         @media(min-width: 768px) {
             .show-mobile {
@@ -68,32 +61,18 @@
         <h3>HTML Responsive Table Demo</h3>
 
         <br>
-        <br>
-        <br>
         <p class="show-desktop">This is your normal HTML Table, Try resizing your screen below 768px</p>
         <p class="show-mobile">This is your table regenerated with mobile friendly UI</p>
         <table class="table" width="100%">
             <thead>
                 <tr>
                     <th>Company</th>
-                    <th>Contact</th>
+                    <th>CEO</th>
                     <th>Country</th>
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td><button>Edit</button><button>Delete</button></td>
-                </tr>
-                <tr>
-                    <td>Centro comercial Moctezuma</td>
-                    <td>Francisco Chang</td>
-                    <td>Mexico</td>
-                    <td><button>Edit</button><button>Delete</button></td>
-                </tr>
                 <tr>
                     <td>Microsoft</td>
                     <td>Satya Nadella</td>
@@ -112,6 +91,18 @@
                     <td>America</td>
                     <td><button>Edit</button><button>Delete</button></td>
                 </tr>
+                <tr>
+                    <td>Amazon</td>
+                    <td>Andy Jassy</td>
+                    <td>America</td>
+                    <td><button>Edit</button><button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Aliexpress</td>
+                    <td>Jack Ma Yun</td>
+                    <td>China</td>
+                    <td><button>Edit</button><button>Delete</button></td>
+                </tr>
             </tbody>
         </table>
 
@@ -123,7 +114,6 @@
         <br>
 
         <h3>Usage:</h3>
-        <em>Prerequisites: <a href="https://jquery.com/download/" target="_blank" rel="nofollow">jQuery Library</a></em>
 
         <p style="font-size: 14px;  color: #0099ff">1 - The Script</p>
         <pre>&lt;script src=&quot;js/responsive-tables.min.js&quot;&gt;&lt;/script&gt;</pre>
@@ -133,7 +123,7 @@
 
         <p style="font-size: 13px; color: #0099ff; margin-top: 25px; display: block">3 - The Setup</p>
         <pre>&lt;script&gt;
-            $(".your-table-class").responsiveTables(options);
+            new responsiveTables('.table',options);
 
             <span style="opacity: 0.5"> /*Setup options*/ </span>
             {
@@ -149,16 +139,10 @@
     </div>
 
     <script>
-        $(function() {
-           $('.table').responsiveTables({
-               onResponsive: function() {
-                   console.log("Mobile blocks shown");
-               },
-               onRevert: function() {
-                   console.log("Mobile blocks hidden");
-               }
-           });
-        })
+        new responsiveTables('.table',{
+            onResponsive: ()=> {console.log('Showing responsive table');},
+            onRevert: ()=> {console.log('Showing original table');}
+        });
     </script>
 </body>
 </html>
