@@ -1,8 +1,7 @@
 # Responsive Tables
-Lightweight script to nicely make HTML Table structure responsive.
+Lightweight Javascript ES6 script make HTML Table responsive.
 
 Usage:
-Prerequisites: jQuery Library
 1 - The Script
 ```
 <script src="js/responsive-tables.min.js"></script>
@@ -17,7 +16,7 @@ Prerequisites: jQuery Library
 
 ```
 <script>
-            $(".your-table-class").responsiveTables(options);
+            new responsiveTables('.table',options);
 
              /*Setup options*/ 
             {
