@@ -1,6 +1,8 @@
 # Responsive Tables
 Lightweight Javascript ES6 script make HTML Table responsive.
 
+Demo: https://htmlpreview.github.io/?https://github.com/mbilal93/responsive-tables/blob/main/index.html
+
 Usage:
 1 - The Script
 ```
